@@ -14,7 +14,9 @@ var app = express();
 // Connection with database
 mongoose.Promise = global.Promise;
 mongoose
-  .connect("mongodb://localhost:27017/trading_data?retryWrites=true&w=majority")
+  .connect(
+    "mongodb+srv://ericmrazon:P@ssw0rd@cluster0.f9ro9.mongodb.net/tradeviewdata?retryWrites=true&w=majority"
+  )
   .then(() => {
     console.log("Database connected.");
   });
